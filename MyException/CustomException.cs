@@ -1,3 +1,5 @@
-public class WrongWeekDay : Exception {
+namespace MyException;
+public class WrongWeekDay : Exception
+{
    public WrongWeekDay(string message) : base(message) { }
 }

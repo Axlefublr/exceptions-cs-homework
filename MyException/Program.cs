@@ -9,5 +9,15 @@ internal class Program
       FileNotFoundException fileNotFoundException = new("Are you sure the file exists? Bc it doesn't");
       WrongWeekDay wrongWeekDay                   = new("Bad weekday. Try running the code tomorrow. May work, but I don't promise anything");
       Exception[] exceptions = {argumentException, divideByZeroException, formatException, fileNotFoundException, wrongWeekDay};
+      
+      foreach (Exception exception in exceptions) {
+         try {
+            throw exception;
+         } catch (Exception caughtException) {
+            Console.WriteLine(caughtException.Message);
+         } finally {
+            Console.WriteLine("We went though another error!");
+         }
+      }
    }
 }
