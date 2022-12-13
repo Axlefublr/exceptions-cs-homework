@@ -1,2 +1,4 @@
 MyException/obj
 MyException/bin
+.vscode
+.gitignore
